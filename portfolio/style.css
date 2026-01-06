@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f4f4f4;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #3b2a22, #5b3a2e);
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+  color: #fff;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  width: 100%;
+}
+
+.hero-text {
+  max-width: 600px;
+  animation: slideLeft 1s ease;
+}
+
+.badge {
+  background: #fff;
+  color: #3b2a22;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  display: inline-block;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+}
+
+.hero-desc {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  padding: 12px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn.primary {
+  background: #fff;
+  color: #3b2a22;
+}
+
+.btn.secondary {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+/* PROFILE IMAGE */
+.hero-image img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid rgba(255,255,255,0.3);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  animation: slideRight 1s ease;
+}
+
+/* SECTIONS */
+.section {
+  padding: 60px 10%;
+  background: #fff;
+}
+
+.section.dark {
+  background: #3b2a22;
+  color: #fff;
+}
+
+.card {
+  background: rgba(0,0,0,0.05);
+  padding: 20px;
+  margin: 15px 0;
+  border-left: 5px solid #5b3a2e;
+}
+
+.section.dark .card {
+  background: rgba(255,255,255,0.1);
+}
+
+.skills {
+  margin-left: 20px;
+}
+
+/* FOOTER */
+footer {
+  background: #5b3a2e;
+  color: #fff;
+  text-align: center;
+  padding: 40px 10%;
+}
+
+/* ANIMATIONS */
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+}
